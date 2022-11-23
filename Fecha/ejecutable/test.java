@@ -1,41 +1,38 @@
 package ejecutable;
 
-import java.util.Scanner;
-import modelo.FechaDetallada;
-
+import modelo.Fecha;
 
 public class test {
     public static void main(String[] args) {
+        Fecha f = new Fecha(0, 0, 0);
+        f.setDia(2);
+        f.setMes(10);
+        f.setYear(1800);
+        f.addDias(180);
 
-        
-        Scanner Leer=new Scanner(System.in);
-        int dia,mes,año,D,M,A;
-        System.out.println("Ingrese Dia:");
-        dia=Leer.nextInt();
-        System.out.println("Ingresar Mes:");
-        mes=Leer.nextInt();
-        System.out.println("Ingresar Año:");
-        año=Leer.nextInt();
+    System.out.println("Día: " + f.getDia());
+    System.out.println("Mes: " + f.getMes());
+    System.out.println("Year: " + f.getYear());
+    System.out.println(f.toString());
 
-        
-        FechaDetallada OP=new FechaDetallada(dia,mes,año);
-        D= OP.getDia();
-        M= OP.getMes();
-        A= OP.getYear();
+    Fecha f2 = new Fecha(0, 0, 0);
+        f2.setDia(2);
+        f2.setMes(11);
+        f2.setYear(1980);
 
-        System.out.println("Día: "+ D);
-        System.out.println("Mes: "+ M);
-        System.out.println("Año: "+ A);
-        
-        // if ((f.equals(f))==(f2.equals(f2))){
-        //System.out.println("No son Iguales las fechas");
-        //}
+    System.out.println("Día: " + f2.getDia());
+    System.out.println("Mes: " + f2.getMes());
+    System.out.println("Year: " + f2.getYear());
+    System.out.println(f2.toString());
 
-        //else{
-            //System.out.println("Son Iguales las fechas");
-        }
+    if(f.equals(f2)){
+    System.out.println("Las fechas son iguales");
+    }
+    else{
+        System.out.println("Las fechas son diferentes");
+    }
+    }
 }
-
 
 
 
